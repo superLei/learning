@@ -1,6 +1,13 @@
 package learn;
 
+import java.util.HashMap;
+
+/**
+ *  正数在左，负数在右。
+ *
+ * */
 public class Exchange {
+
     public static int[] exchange(int[] nums){
         int left =0;
         int right = nums.length -1;

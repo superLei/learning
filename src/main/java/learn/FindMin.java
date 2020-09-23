@@ -1,5 +1,11 @@
 package learn;
 
+import java.util.Arrays;
+
+/**
+ * 找出旋转数组中最小的数
+ *
+ * */
 public class FindMin {
 
     public static int findMin(int[] nums) {
@@ -31,7 +37,9 @@ public class FindMin {
     public static void main(String[] args) {
 //        int[] num = {3,4,5,1,2};
         int[] num = {4, 5, 6, 7, 0, 1, 2};
-        System.out.println(findMin(num));
+        int [] n = new int[3];
+        System.out.println(Arrays.toString(n));
+//        System.out.println(findMin(num));
     }
 
 }
