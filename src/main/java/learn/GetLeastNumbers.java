@@ -23,5 +23,19 @@ public class GetLeastNumbers {
         }
         return pq.stream().mapToInt(Integer::intValue).toArray();
     }
+
+
+    public static int[] getLeastNumbers2(int[] arr ,int k){
+        Queue<Integer> res = new PriorityQueue<>((v1,v2) ->v2-v1);
+        for(int i : arr){
+            if(res.size() < k){
+                res.add(i);
+            }else if(res.peek() > i){
+               res.poll();
+               res.add(i);
+            }
+        }
+        return res.stream().mapToInt(Integer::intValue).toArray();
+    }
 }
 
