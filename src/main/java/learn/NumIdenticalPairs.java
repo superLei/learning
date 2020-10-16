@@ -1,5 +1,6 @@
 package learn;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -132,8 +133,12 @@ public class NumIdenticalPairs {
 //        boolean b1 = containsDuplicate(nums);
 //        System.out.println(b1);
 //        int[] ints = smallerNumbersThanCurrent(nums);
-        for (int i = 0; i < ints.length; i++) {
-            System.out.println(ints[i]);
-        }
+//        for (int i = 0; i < ints.length; i++) {
+//            System.out.println(ints[i]);
+//        }
+        int j = 1;
+        System.out.println((++j)+(++j));
+        System.out.println(new SimpleDateFormat("yyyyMMddhhmmss").format(new Date()));
+        System.out.println(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
     }
 }
