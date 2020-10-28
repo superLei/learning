@@ -42,6 +42,7 @@ public class MaxSlidingWindow59 {
     }
 
     /**
+     * todo 使用队列的方式来实现，
      *
      * */
     public static int[] maxSlidingWindow2(int[] nums, int k) {
