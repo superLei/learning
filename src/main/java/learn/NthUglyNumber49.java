@@ -17,7 +17,7 @@ package learn;
  *
  * @author su
  */
-public class NthUglyNumber {
+public class NthUglyNumber49 {
     public static int nthUglyNumber(int n) {
         int i = 0;
         while (n > 0) {
