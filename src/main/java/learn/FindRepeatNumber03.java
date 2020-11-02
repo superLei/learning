@@ -16,7 +16,7 @@ import java.util.Set;
  * 输出：2 或 3
  *
  * */
-public class FindRepeatNumber {
+public class FindRepeatNumber03 {
     /**
      *  时间复杂度为O(n),空间复杂度为O(n)
      *  利用Set集合的特性，判断是否出现重复的数字
