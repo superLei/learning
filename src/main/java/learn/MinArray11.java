@@ -66,16 +66,25 @@ public class MinArray11 {
      *
      * */
     public static int minArray3(int[] numbers) {
-        int start = 0,end = numbers.length;
+        int start = 0,end = numbers.length -1;
         while (start < end) {
             int mid = (start + end) /2;
-            if(numbers[mid] > numbers[])
+            if(numbers[mid] < numbers[end]){
+               end = mid;
+            }else if (numbers[mid] > numbers[end]){
+                start = mid + 1;
+            }else {
+                end--;
+            }
+
         }
+        return numbers[start];
     }
     public static void main(String[] args) {
 //        int[] nums = {7,8,9,4,5};
-        int[] nums = {2,2,2,0,1};
+//        int[] nums = {2,2,2,0,1};
+        int[] nums = {6,7,1,2,3,4,5};
         System.out.println(minArray(nums));
-        System.out.println(minArray2(nums));
+        System.out.println(minArray3(nums));
     }
 }
