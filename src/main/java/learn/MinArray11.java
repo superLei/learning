@@ -1,5 +1,8 @@
 package learn;
 
+import com.google.gson.Gson;
+
+import java.math.BigDecimal;
 import java.util.Optional;
 
 /**
@@ -14,11 +17,14 @@ import java.util.Optional;
  *
  * 输入：[2,2,2,0,1]
  * 输出：0
+ * @author su
  */
 public class MinArray11 {
 
     public static int minArray(int[] nums) {
-        if (nums.length == 0) return -1;
+        if (nums.length == 0) {
+            return -1;
+        }
 
         int start = 0, end = nums.length - 1;
         while (start < end) {
@@ -83,16 +89,58 @@ public class MinArray11 {
         return numbers[start];
     }
 
-    private static class A{
+    public static class A{
         private String cardid;
+        private String cards;
+        private BigDecimal money;
+        private BigDecimal cash;
 
         private A(String cardid) {
             this.cardid = cardid;
         }
 
+        public A() {
+
+        }
+
         public void setCardid(String cardid) {
             this.cardid = cardid;
         }
+
+        public String getCards() {
+            return cards;
+        }
+
+        public void setCards(String cards) {
+            this.cards = cards;
+        }
+
+        public String getCardid() {
+            return cardid;
+        }
+
+        public BigDecimal getMoney() {
+            return money;
+        }
+
+        public void setMoney(BigDecimal money) {
+            this.money = money;
+        }
+
+        public BigDecimal getCash() {
+            return cash;
+        }
+
+        public void setCash(BigDecimal cash) {
+            this.cash = cash;
+        }
+    }
+    public static void test1(){
+
+        A a1 = new A();
+        a1.setCash(new BigDecimal("0.00"));
+        a1.setMoney(a1.getCash());
+        System.out.println(new Gson().toJson(a1));
     }
     public static void main(String[] args) {
 //        int[] nums = {7,8,9,4,5};
@@ -102,5 +150,7 @@ public class MinArray11 {
         System.out.println(minArray3(nums));
         A a = null;
         Optional.ofNullable(a).ifPresent(x -> x.setCardid("123"));
+
+
     }
 }
