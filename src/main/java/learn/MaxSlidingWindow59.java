@@ -28,7 +28,7 @@ public class MaxSlidingWindow59 {
      *
      * */
     public static int[] maxSlidingWindow(int[] nums, int k) {
-        if(nums.length < 0 || nums == null || k <= 0) return new int[0];
+        if(nums.length < 1 || nums == null || k <= 0) return new int[0];
         int[] result = new int[nums.length - k + 1];
         for (int i = 0; i < nums.length -k + 1; i++) {
             int curMax = nums[i];

@@ -1,7 +1,6 @@
 package learn;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  *找出数组中重复的数字。
@@ -35,7 +34,8 @@ public class FindRepeatNumber03 {
     /**
      * 时间复杂度为O(n),空间复杂度为O(1)
      * 如果没有重复的数字，那么正常排序后，数字i就应该在下标i的位置上。如果不相等，假设下标i的值为m,则与下标为m的数字进行交换，直到找到相等的结束。
-     * */
+     *
+     * @return*/
     public static int findRepeatNumber2(int[] nums) {
         int temp = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -49,5 +49,10 @@ public class FindRepeatNumber03 {
            }
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] ns = {0,1,2,3,3,4,5,5};
+        System.out.println(findRepeatNumber2(ns));
     }
 }

@@ -54,7 +54,7 @@ public class ReverseLeftWords58 {
 
     public static void main(String[] args) {
         Stopwatch started = Stopwatch.createStarted();
-        System.out.println(reverseLeftWords("abcdefg",2));
+        System.out.println(reverseLeftWords("abcdefg",7));
         started.stop();
         System.out.println(started.toString());
         started.reset();
